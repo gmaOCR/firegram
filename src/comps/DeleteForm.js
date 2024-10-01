@@ -22,7 +22,7 @@ const DeleteForm = ({ selectedFile,  setSelectedMsg }) => {
         if (error) {
             setMessage(`Failed to delete item with ID ${selectedFile.id}: ${error}`);
         }
-    }, [success, error, selectedFile.id]);
+    }, [success, error, selectedFile.id, setSelectedMsg]);
 
     return (
         <motion.div 
