@@ -83,7 +83,7 @@ label:hover{
   height: 0;
   padding: 50% 0;
   position: relative;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 .img-wrap img{
   min-width: 100%;
@@ -110,4 +110,66 @@ label:hover{
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
+}
+
+.modal-message{
+  position: fixed;
+  max-width: 60%;
+  max-height: 80%;
+  position: fixed; 
+  top: 40%; 
+  left: 40%; 
+  transform: translate(-50%, -50%);
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+/* delete button  */
+
+.delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  padding: 3px 7px;
+  border: 1px solid var(--error);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--error);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  z-index: 10;
+}
+
+
+.validate-button {
+  display: inline-block;
+  padding: 3px 7px;
+  border: 1px solid green;
+  border-radius: 50%;
+  background-color: transparent;
+  color: green;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: var(--error);
+  color: white;
+}
+
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--error);
 }

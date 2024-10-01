@@ -3,16 +3,18 @@ import { getStorage, uploadBytesResumable, getDownloadURL, ref as storRef } from
 import { ref as dbRef, set, push, getDatabase, onValue, get,
   orderByChild, query, serverTimestamp, remove } from 'firebase/database';
 
+  console.log(process.env.REACT_APP_FIREBASE_DATABASE_URL);
+
 
 // Configuration Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBfBHeJFpZS1t73ZNlnE-X2hl84G48M7KY",
-  authDomain: "firegram-tuto-d3f26.firebaseapp.com",
-  projectId: "firegram-tuto-d3f26",
-  storageBucket: "firegram-tuto-d3f26.appspot.com",
-  messagingSenderId: "1004100313824",
-  appId: "1:1004100313824:web:3ef8b38fbd73673b496685",
-  databaseURL:"https://firegram-tuto-d3f26-default-rtdb.europe-west1.firebasedatabase.app/"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
 };
 
 // Initialisation de Firebase
