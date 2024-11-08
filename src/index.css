@@ -173,3 +173,9 @@ label:hover{
   outline: none;
   box-shadow: 0 0 5px var(--error);
 }
+
+
+.image-container img {
+  pointer-events: none; 
+  user-select: none;    
+}

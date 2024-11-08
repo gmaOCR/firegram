@@ -9,15 +9,19 @@ const Modal =  ({selectedImg, setSelectedImg, selectedMsg, setSelectedMsg}) => {
         setSelectedMsg(null)
     }
 
+    const preventDownload = (e) => e.preventDefault();
+
     return (
 <motion.div className="backdrop" onClick={handeClick}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
+    onContextMenu={preventDownload} 
 >
     {selectedImg && (
         <motion.img src={selectedImg} alt="enlarged pic"
             initial={{ y: "-100vh" }}
             animate={{ y: 0 }}
+            onDragStart={preventDownload}
         />
     )}
 
